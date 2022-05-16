@@ -1,0 +1,25 @@
+.jumbotron {
+  /*
+  // background image will be set by component binding
+  background-image: url(/assets/icons/search_background.png);
+  background-image: linear-gradient(#eb01a500 60%, #211f2a),
+    url(/assets/icons/search_background.png);
+*/
+  background-size: cover;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  object-position: center;
+  object-fit: none;
+  height: 500px;
+  max-height: 550px;
+  min-height: 450px;
+  padding-top: 0px;
+}
+.navbar {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}

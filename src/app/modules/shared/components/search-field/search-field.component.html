@@ -1,0 +1,67 @@
+<form (ngSubmit)="submitSearchForm()" [style.height.px]="height">
+  <div class="input-group" style="height: 100%">
+    <div class="input-group-prepend" style="margin: 0; height: 100%">
+      <span
+        class="input-group-text"
+        style="
+          border-bottom-left-radius: 20px;
+          border-top-left-radius: 20px;
+          background: #ffffff80;
+        "
+      >
+        <img
+          src="..\assets\icons\magnifying_glass_large.png"
+          style="height: 80%"
+        />
+      </span>
+    </div>
+    <input
+      type="text"
+      class="form-control"
+      style="
+        height: 100%;
+        background: #ffffff80;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        color: white;
+        font-family: roboto;
+        font-weight: 400;
+      "
+      name="searchValue"
+      placeholder="Search"
+      [(ngModel)]="searchValue"
+    />
+    <div
+      class="input-group-append"
+      style="
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        z-index: 10;
+        transform: translateY(-50%);
+      "
+    >
+      <button
+        class="input-group"
+        style="
+          color: white;
+          border-radius: 20px;
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+          opacity: 1;
+          background: linear-gradient(
+            116.56505117707799deg,
+            rgba(255, 97, 97, 1) 0%,
+            rgba(255, 97, 163, 1) 100%
+          );
+          padding: 0px 20px;
+          font: Avenir;
+          font-weight: 500;
+          border-width: 0px;
+        "
+        type="submit"
+      >
+        GO
+      </button>
+    </div>
+  </div>
+</form>

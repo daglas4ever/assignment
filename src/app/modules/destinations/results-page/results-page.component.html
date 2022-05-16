@@ -1,0 +1,58 @@
+<div *ngIf="!notFoundFlag">
+  <div class="text-center" style="margin-top: 250px">
+    <h1 style="font-size: 50px; font-weight: 600">
+      {{ destination.city }}
+    </h1>
+    <h4 style="color: #d3d3d3">
+      {{ destination.country_name }}
+    </h4>
+  </div>
+
+  <section title="What it is like section">
+    <h1 class="mt-3 mb-2 section-title" style="color: #ffed7b">
+      What’s it like?
+    </h1>
+    <p class="section-paragraph">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit.
+    </p>
+  </section>
+
+  <section class="" title="Blogs Section">
+    <h1 class="my-2 section-title" style="color: #7bfbff">Blog Posts</h1>
+    <div class="row">
+      <div
+        class="col-md-4 p-2"
+        *ngFor="let _ of [].constructor(6); index as index"
+      >
+        <div class="image-place-holder-grey"></div>
+      </div>
+    </div>
+  </section>
+
+  <app-lucky-trip-button
+    (onLuckyTrip)="luckyTripBtn($event)"
+    [cityName]="destination.city"
+  ></app-lucky-trip-button>
+</div>
+
+<div *ngIf="notFoundFlag">
+  <div class="text-center" style="margin-top: 200px">
+    <h1 style="font-size: 50px; font-weight: 600">Ops, Location Not Found!</h1>
+    <h4 style="color: #d3d3d3">You Can search for another location</h4>
+    <div class="text-center">
+      <div class="mx-auto" style="width: 300px">
+        <app-search-field [mode]="'redirect'" height="50"></app-search-field>
+      </div>
+    </div>
+
+    <h2 class="my-5">OR YOU CAN</h2>
+  </div>
+
+  <app-lucky-trip-button
+    (onLuckyTrip)="luckyTripBtn($event)"
+  ></app-lucky-trip-button>
+</div>

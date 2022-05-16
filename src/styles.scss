@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;700&display=swap");
+
+* {
+  font-family: roboto, "Nunito", Helvetica, sans-serif;
+}
+@import "assets/styles/ltr/style-ltr";
+
+[dir="rtl"] {
+  @import "assets/styles/rtl/style-rtl";
+}
+
+@import "assets/styles/shared/shared.styles";
+
+.breath {
+  animation: breathing 1.5s linear infinite;
+}
+
+@keyframes breathing {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+.section-title {
+  font-weight: 900;
+  font-size: 32px;
+}
+.section-paragraph {
+  font-size: 24px;
+  font-weight: 300;
+}

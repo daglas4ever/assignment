@@ -1,0 +1,61 @@
+<div
+  class="jumbotron jumbotron-fluid"
+  [style.background-image]="
+    'linear-gradient(#eb01a500 60%, #211f2a), url(' +
+    (mainLayoutService.backgroundImageUrl$ | async) +
+    ')'
+  "
+>
+  <!-- Header Nav Bar Start -->
+  <nav class="navbar navbar-expand-lg navbar bg justify-content-center">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/" style="width: 0">
+        <img
+          src="./assets\icons\logo\lucky_trip_logo_small.png"
+          title="LuckyTrip Homepage"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="form-inline mx-auto my-lg-0"
+        style="height: 40px"
+        *ngIf="!(mainLayoutService.searchComponentHidden$ | async)"
+      >
+        <app-search-field [height]="35" mode="redirect"></app-search-field>
+      </div>
+    </div>
+  </nav>
+  <!-- Header Navbar End-->
+
+  <!-- App Content Start-->
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+  <!-- App Content End-->
+
+  <!-- Footer -->
+  <footer
+    style="
+      height: 150px;
+      bottom: 0;
+      padding-top: 70px;
+      position: relative;
+      right: 0;
+      left: 0;
+    "
+  >
+    <div class="container text-center">
+      <small>Copyright &copy; Angular Template by Mohammad Daghlas</small>
+    </div>
+  </footer>
+</div>

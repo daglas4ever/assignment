@@ -1,0 +1,24 @@
+.header,
+.header-space,
+.footer,
+.footer-space {
+  height: 100px;
+  width: 100%;
+}
+.header {
+  position: fixed;
+  top: 0;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+}
+@media screen {
+  :host {
+    display: none;
+  }
+}
+.print-container {
+  margin: 0px;
+  padding: 10px 15px;
+}

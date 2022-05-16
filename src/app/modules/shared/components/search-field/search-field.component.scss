@@ -1,0 +1,26 @@
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+.form-control,
+.input-group-text {
+  border: 0;
+}
+.form-control:focus {
+  border-color: rgba(40, 167, 69, 0);
+  box-shadow: 0 0 0 0rem rgba(40, 167, 69, 0);
+}
+button:focus {
+  outline: 0px;
+}
